@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Glow Store | Noor & Haneen</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root{
+    --pink:#e91e63;
+    --pink-dark:#c2185b;
+    --pink-light:#fff0f6;
+    --pink-soft:#f9d8e5;
+    --gold:#c7a24b;
+    --gold-light:#f6e9c7;
+    --black:#151515;
+    --dark:#202020;
+    --gray:#777;
+    --light:#fafafa;
+    --white:#fff;
+    --green:#25a56a;
+    --shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Cairo",sans-serif;
+    background:#fff;
+    color:var(--black);
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+    position:fixed;
+    top:0;
+    right:0;
+    width:100%;
+    z-index:9999;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid #f2dfe7;
+}
+
+.navbar{
+    max-width:1250px;
+    height:82px;
+    margin:auto;
+    padding:0 25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:"Playfair Display",serif;
+    font-size:31px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:var(--pink);
+}
+
+.logo small{
+    display:block;
+    font-family:"Cairo",sans-serif;
+    font-size:8px;
+    letter-spacing:4px;
+    text-align:center;
+    color:var(--gold);
+    margin-top:-6px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+nav a{
+    font-size:13px;
+    color:#444;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--pink);
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.nav-btn{
+    padding:10px 20px;
+    border-radius:30px;
+    background:var(--pink);
+    color:#fff;
+    font-size:12px;
+    transition:.3s;
+}
+
+.nav-btn:hover{
+    background:var(--black);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:100vh;
+    padding:145px 7% 80px;
+
+    background:
+        radial-gradient(circle at 10% 20%,#ffd9e7 0,transparent 28%),
+        radial-gradient(circle at 90% 75%,#f9e8c8 0,transparent 27%),
+        linear-gradient(135deg,#fff5f8,#fff);
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-container{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.hero-text{
+    text-align:right;
+}
+
+.hero-label{
+    color:var(--gold);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(60px,8vw,100px);
+    line-height:.95;
+    margin:22px 0;
+}
+
+.hero h1 span{
+    color:var(--pink);
+}
+
+.hero h2{
+    font-size:22px;
+    font-weight:600;
+    margin-bottom:18px;
+    color:#444;
+}
+
+.hero p{
+    max-width:580px;
+    color:#777;
+    line-height:2.1;
+    font-size:14px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    justify-content:flex-start;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:13px 27px;
+    border-radius:30px;
+    font-size:13px;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--pink);
+    color:white;
+    box-shadow:0 10px 25px rgba(233,30,99,.22);
+}
+
+.btn-primary:hover{
+    background:var(--black);
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid var(--gold);
+    color:var(--black);
+}
+
+.btn-outline:hover{
+    background:var(--gold);
+    color:#fff;
+}
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual{
+    position:relative;
+    height:540px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.fashion-card{
+    width:390px;
+    height:500px;
+    border-radius:210px 210px 25px 25px;
+
+    background:
+        linear-gradient(145deg,rgba(255,255,255,.65),transparent),
+        linear-gradient(145deg,#efbfd1,#fff);
+
+    box-shadow:30px 30px 70px rgba(0,0,0,.13);
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.fashion-card::before{
+    content:"GLOW";
+    position:absolute;
+    font-family:"Playfair Display",serif;
+    font-size:110px;
+    color:rgba(255,255,255,.5);
+    transform:rotate(-90deg);
+}
+
+.fashion-card::after{
+    content:"NOOR & HANEEN";
+    position:absolute;
+    bottom:45px;
+    font-size:10px;
+    letter-spacing:5px;
+    color:rgba(0,0,0,.35);
+}
+
+.circle-gold{
+    position:absolute;
+    width:110px;
+    height:110px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    top:25px;
+    right:-45px;
+}
+
+.circle-pink{
+    position:absolute;
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:var(--pink);
+    bottom:55px;
+    left:-30px;
+}
+
+.floating-card{
+    position:absolute;
+    background:#fff;
+    padding:16px 20px;
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    z-index:3;
+}
+
+.floating-card.top{
+    top:50px;
+    left:5px;
+}
+
+.floating-card.bottom{
+    bottom:50px;
+    right:0;
+}
+
+.floating-card strong{
+    display:block;
+    font-size:18px;
+    color:var(--pink);
+}
+
+.floating-card span{
+    color:#888;
+    font-size:10px;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+section{
+    padding:95px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title span{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-family:"Playfair Display",serif;
+    font-size:43px;
+    margin:8px 0;
+}
+
+.section-title p{
+    color:#888;
+    font-size:13px;
+}
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.categories{
+    background:#fff;
+}
+
+.category-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.category{
+    min-height:245px;
+    border-radius:20px;
+    background:var(--pink-light);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    position:relative;
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.category::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:rgba(255,255,255,.55);
+    top:-60px;
+    left:-50px;
+}
+
+.category:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(233,30,99,.13);
+}
+
+.category-icon{
+    font-size:48px;
+    margin-bottom:12px;
+}
+
+.category h3{
+    font-family:"Playfair Display",serif;
+    font-size:23px;
+}
+
+.category p{
+    color:#888;
+    font-size:12px;
+    margin-top:7px;
+}
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+.products{
+    background:#fff8fb;
+}
+
+.product-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.product{
+    background:#fff;
+    border:1px solid #f2e2e8;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow);
+}
+
+.product-image{
+    height:280px;
+    background:linear-gradient(135deg,#fce3ec,#f5cddd);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:70px;
+    position:relative;
+}
+
+.product-tag{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    background:var(--pink);
+    color:white;
+
+    font-size:9px;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+.product-info{
+    padding:20px;
+}
+
+.product-info h3{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.product-info p{
+    color:#999;
+    font-size:11px;
+    margin-bottom:12px;
+}
+
+.product-bottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.price{
+    color:var(--pink);
+    font-size:18px;
+    font-weight:800;
+}
+
+.product-btn{
+    padding:8px 15px;
+    border-radius:20px;
+    border:1px solid var(--pink-soft);
+    font-size:11px;
+    transition:.3s;
+}
+
+.product-btn:hover{
+    background:var(--pink);
+    color:#fff;
+}
+
+/* =========================================================
+   PERFORMANCE
+========================================================= */
+
+.performance{
+    background:var(--black);
+    color:#fff;
+}
+
+.performance .section-title h2{
+    color:#fff;
+}
+
+.performance .section-title p{
+    color:#999;
+}
+
+.stats{
+    max-width:1150px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.stat{
+    padding:30px 20px;
+    background:#202020;
+    border:1px solid #333;
+    border-radius:18px;
+    text-align:center;
+}
+
+.stat-number{
+    font-family:"Playfair Display",serif;
+    font-size:35px;
+    color:var(--gold);
+    margin-bottom:7px;
+}
+
+.stat-label{
+    color:#ccc;
+    font-size:12px;
+}
+
+.progress-box{
+    max-width:800px;
+    margin:35px auto 0;
+}
+
+.progress-title{
+    display:flex;
+    justify-content:space-between;
+    color:#ccc;
+    font-size:12px;
+    margin-bottom:8px;
+}
+
+.progress{
+    height:8px;
+    background:#333;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress span{
+    display:block;
+    width:71.8%;
+    height:100%;
+    background:linear-gradient(90deg,var(--pink),var(--gold));
+    border-radius:20px;
+}
+
+/* =========================================================
+   FINANCE
+========================================================= */
+
+.finance{
+    background:#fff;
+}
+
+.finance-box{
+    max-width:1150px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.finance-card{
+    padding:35px 25px;
+    text-align:center;
+
+    background:#fff8fa;
+    border:1px solid #f0dce4;
+    border-radius:20px;
+
+    transition:.3s;
+}
+
+.finance-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.finance-card h3{
+    font-size:12px;
+    color:#888;
+    margin-bottom:13px;
+}
+
+.finance-card strong{
+    font-family:"Playfair Display",serif;
+    font-size:31px;
+}
+
+.finance-card p{
+    color:#999;
+    font-size:11px;
+    margin-top:5px;
+}
+
+.finance-card.highlight{
+    background:linear-gradient(135deg,var(--pink),#c2185b);
+    border:none;
+    color:white;
+    box-shadow:0 15px 40px rgba(233,30,99,.22);
+}
+
+.finance-card.highlight h3,
+.finance-card.highlight p{
+    color:#ffe7f0;
+}
+
+/* =========================================================
+   FINANCIAL TABLE
+========================================================= */
+
+.financial-table-wrapper{
+    max-width:1150px;
+    margin:40px auto 0;
+    overflow-x:auto;
+}
+
+.financial-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.financial-table th{
+    background:var(--black);
+    color:#fff;
+    padding:14px;
+    font-size:12px;
+}
+
+.financial-table td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+    font-size:12px;
+}
+
+.financial-table tr:last-child td{
+    border-bottom:none;
+}
+
+.profit{
+    color:var(--green);
+    font-weight:800;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+    background:var(--pink-light);
+}
+
+.about-container{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-container span{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+.about-container h2{
+    font-family:"Playfair Display",serif;
+    font-size:45px;
+    margin:10px 0 20px;
+}
+
+.about-container p{
+    color:#666;
+    line-height:2.3;
+    font-size:14px;
+}
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.feature{
+    text-align:center;
+    padding:25px;
+}
+
+.feature-icon{
+    width:65px;
+    height:65px;
+    margin:0 auto 15px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+    background:var(--pink-light);
+
+    font-size:27px;
+}
+
+.feature h3{
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.feature p{
+    color:#888;
+    font-size:11px;
+    line-height:1.8;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+    background:#111;
+    color:#fff;
+    text-align:center;
+}
+
+.contact h2{
+    font-family:"Playfair Display",serif;
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.contact p{
+    color:#aaa;
+    font-size:13px;
+    margin-bottom:25px;
+}
+
+.contact-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.instagram{
+    background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+    color:#fff;
+}
+
+.whatsapp{
+    background:#25d366;
+    color:#fff;
+}
+
+.contact-buttons .btn{
+    min-width:145px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#090909;
+    color:#777;
+    text-align:center;
+    padding:28px 15px;
+    font-size:11px;
+    line-height:2;
+}
+
+footer strong{
+    color:var(--pink);
+}
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.whatsapp-float{
+    position:fixed;
+    bottom:22px;
+    left:22px;
+    width:55px;
+    height:55px;
+
+    background:#25d366;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:27px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+    z-index:5000;
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px){
+
+    nav{
+        gap:15px;
+    }
+
+    .hero-container{
+        gap:35px;
+    }
+
+    .category-grid,
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:750px){
+
+    .navbar{
+        height:72px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        padding:120px 6% 60px;
+    }
+
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-text{
+        text-align:center;
+    }
+
+    .hero p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-visual{
+        height:440px;
+    }
+
+    .fashion-card{
+        width:290px;
+        height:380px;
+    }
+
+    .floating-card.top{
+        left:0;
+    }
+
+    .floating-card.bottom{
+        right:-5px;
+    }
+
+    section{
+        padding:75px 5%;
+    }
+
+    .section-title h2{
+        font-size:35px;
+    }
+
+    .finance-box{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:520px){
+
+    .logo{
+        font-size:25px;
+    }
+
+    .nav-btn{
+        padding:8px 14px;
+        font-size:10px;
+    }
+
+    .hero h1{
+        font-size:58px;
+    }
+
+    .hero h2{
+        font-size:18px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-buttons .btn{
+        width:210px;
+    }
+
+    .category-grid,
+    .product-grid,
+    .stats,
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .contact h2{
+        font-size:35px;
+    }
+
+    .contact-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .contact-buttons .btn{
+        width:210px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+<div class="navbar">
+
+<a href="#home" class="logo">
+    GLOW<span>.</span>
+    <small>NOOR & HANEEN</small>
+</a>
+
+<nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#collection">المجموعة</a>
+    <a href="#products">المنتجات</a>
+    <a href="#performance">الأداء</a>
+    <a href="#finance">المالية</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">تواصل معنا</a>
+</nav>
+
+<div class="nav-actions">
+    <a href="#products" class="nav-btn">تسوقي الآن ✨</a>
+</div>
+
+</div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+<div class="hero-text">
+
+<div class="hero-label">
+    WOMEN'S FASHION • 2026
+</div>
+
+<h1>
+    Let Your<br>
+    <span>Glow</span>
+</h1>
+
+<h2>
+    أناقتك تبدأ من Glow ✨
+</h2>
+
+<p>
+    اكتشفي عالمًا من الأناقة والراحة مع
+    Glow Store by Noor & Haneen.
+    تشكيلة مختارة من البجامات والفساتين
+    والملابس النسائية والإكسسوارات بأسعار مناسبة.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#products" class="btn btn-primary">
+    اكتشفي المجموعة
+</a>
+
+<a href="#about" class="btn btn-outline">
+    تعرفي علينا
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-visual">
+
+<div class="floating-card top">
+    <strong>191+</strong>
+    <span>قطعة مباعة</span>
+</div>
+
+<div class="fashion-card">
+    <div class="circle-gold"></div>
+    <div class="circle-pink"></div>
+</div>
+
+<div class="floating-card bottom">
+    <strong>71.8%</strong>
+    <span>نسبة الإنجاز</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     COLLECTION
+========================================================= -->
+
+<section class="categories" id="collection">
+
+<div class="section-title">
+
+<span>OUR COLLECTION</span>
+
+<h2>اختاري إطلالتك</h2>
+
+<p>
+كل ما تحتاجينه لإطلالة أنيقة ومميزة
+</p>
+
+</div>
+
+<div class="category-grid">
+
+<div class="category">
+    <div class="category-icon">🎀</div>
+    <h3>Pajamas</h3>
+    <p>بجامات ناعمة ومريحة</p>
+</div>
+
+<div class="category">
+    <div class="category-icon">👗</div>
+    <h3>Dresses</h3>
+    <p>فساتين بتصاميم أنيقة</p>
+</div>
+
+<div class="category">
+    <div class="category-icon">✨</div>
+    <h3>Fashion</h3>
+    <p>أحدث صيحات الموضة</p>
+</div>
+
+<div class="category">
+    <div class="category-icon">💎</div>
+    <h3>Accessories</h3>
+    <p>تفاصيل تكمل إطلالتك</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PRODUCTS
+========================================================= -->
+
+<section class="products" id="products">
+
+<div class="section-title">
+
+<span>GLOW COLLECTION</span>
+
+<h2>اختياراتنا المميزة</h2>
+
+<p>
+قطع مختارة بعناية لتناسب ذوقك
+</p>
+
+</div>
+
+<div class="product-grid">
+
+
+<div class="product">
+
+<div class="product-image">
+
+<span>🎀</span>
+
+<div class="product-tag">
+    الأكثر مبيعًا
+</div>
+
+</div>
+
+<div class="product-info">
+
+<h3>بجامة قديفة</h3>
+
+<p>Soft & Elegant Collection</p>
+
+<div class="product-bottom">
+
+<div class="price">
+15,000 IQD
+</div>
+
+<a href="#contact" class="product-btn">
+اطلبي الآن
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+
+<span>🌸</span>
+
+<div class="product-tag">
+    مميز
+</div>
+
+</div>
+
+<div class="product-info">
+
+<h3>بجامة فرو</h3>
+
+<p>Comfort Collection</p>
+
+<div class="product-bottom">
+
+<div class="price">
+10,000 IQD
+</div>
+
+<a href="#contact" class="product-btn">
+اطلبي الآن
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+
+<span>✨</span>
+
+<div class="product-tag">
+    Special
+</div>
+
+</div>
+
+<div class="product-info">
+
+<h3>بجامة كرسمس</h3>
+
+<p>Special Collection</p>
+
+<div class="product-bottom">
+
+<div class="price">
+18,000 IQD
+</div>
+
+<a href="#contact" class="product-btn">
+اطلبي الآن
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+
+<span>👗</span>
+
+<div class="product-tag">
+    جديد
+</div>
+
+</div>
+
+<div class="product-info">
+
+<h3>فساتين نسائية</h3>
+
+<p>Elegant Dresses</p>
+
+<div class="product-bottom">
+
+<div class="price">
+15,000 IQD
+</div>
+
+<a href="#contact" class="product-btn">
+اطلبي الآن
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PERFORMANCE
+========================================================= -->
+
+<section class="performance" id="performance">
+
+<div class="section-title">
+
+<span>BUSINESS PERFORMANCE</span>
+
+<h2>أداء المبيعات</h2>
+
+<p>
+Glow Store — Sales Performance Dashboard
+</p>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+
+<div class="stat-number">
+266
+</div>
+
+<div class="stat-label">
+إجمالي القطع
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+191
+</div>
+
+<div class="stat-label">
+القطع المباعة
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+47
+</div>
+
+<div class="stat-label">
+القطع المتبقية
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+71.8%
+</div>
+
+<div class="stat-label">
+نسبة الإنجاز
+</div>
+
+</div>
+
+</div>
+
+<div class="progress-box">
+
+<div class="progress-title">
+
+<span>نسبة المبيعات</span>
+
+<strong>71.8%</strong>
+
+</div>
+
+<div class="progress">
+    <span></span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FINANCE
+========================================================= -->
+
+<section class="finance" id="finance">
+
+<div class="section-title">
+
+<span>FINANCIAL OVERVIEW</span>
+
+<h2>النتيجة المالية</h2>
+
+<p>
+ملخص الأداء المالي للمشروع
+</p>
+
+</div>
+
+
+<div class="finance-box">
+
+
+<div class="finance-card">
+
+<h3>
+إجمالي المبيعات
+</h3>
+
+<strong>
+1,791,000
+</strong>
+
+<p>
+IQD
+</p>
+
+</div>
+
+
+<div class="finance-card">
+
+<h3>
+إجمالي الربح
+</h3>
+
+<strong>
+438,000
+</strong>
+
+<p>
+IQD
+</p>
+
+</div>
+
+
+<div class="finance-card highlight">
+
+<h3>
+صافي الربح التقديري
+</h3>
+
+<strong>
+272,500
+</strong>
+
+<p>
+IQD
+</p>
+
+</div>
+
+</div>
+
+
+<div class="financial-table-wrapper">
+
+<table class="financial-table">
+
+<thead>
+
+<tr>
+    <th>المؤشر</th>
+    <th>القيمة</th>
+    <th>العملة</th>
+    <th>الحالة</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+    <td>إجمالي المبيعات</td>
+    <td>1,791,000</td>
+    <td>IQD</td>
+    <td>ممتاز</td>
+</tr>
+
+<tr>
+    <td>إجمالي الربح</td>
+    <td class="profit">438,000</td>
+    <td>IQD</td>
+    <td>مربح</td>
+</tr>
+
+<tr>
+    <td>صافي الربح التقديري</td>
+    <td class="profit">272,500</td>
+    <td>IQD</td>
+    <td>جيد جدًا</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about" id="about">
+
+<div class="about-container">
+
+<span>ABOUT GLOW</span>
+
+<h2>
+Glow Store
+</h2>
+
+<p>
+
+Glow Store by Noor & Haneen هو مشروع نسائي
+يجمع بين الأناقة والراحة والأسعار المناسبة.
+
+نقدم تشكيلة مختارة من البجامات والملابس النسائية
+والإكسسوارات، مع اهتمام بالتفاصيل وجودة الاختيار.
+
+هدفنا هو بناء علامة نسائية عصرية
+تجعل كل امرأة تشعر بأنها أجمل وأكثر ثقة.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section>
+
+<div class="section-title">
+
+<span>WHY GLOW</span>
+
+<h2>لماذا Glow Store؟</h2>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<div class="feature-icon">
+💗
+</div>
+
+<h3>Elegant</h3>
+
+<p>
+تصاميم أنيقة تناسب المرأة العصرية.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+✨
+</div>
+
+<h3>Quality</h3>
+
+<p>
+اختيار المنتجات بعناية واهتمام.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🎀
+</div>
+
+<h3>Comfort</h3>
+
+<p>
+أناقة وراحة في نفس الوقت.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+💎
+</div>
+
+<h3>Affordable</h3>
+
+<p>
+أسعار مناسبة وعروض مميزة.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact" id="contact">
+
+<h2>
+Let's Glow Together ✨
+</h2>
+
+<p>
+تابعينا واكتشفي أحدث المنتجات والعروض
+</p>
+
+<div class="contact-buttons">
+
+<!-- ضعي رابط الانستغرام الحقيقي هنا -->
+<a href="https://instagram.com/" target="_blank" class="btn instagram">
+    Instagram
+</a>
+
+<!-- ضعي رقم الواتساب الحقيقي هنا -->
+<a href="https://wa.me/9640000000000" target="_blank" class="btn whatsapp">
+    WhatsApp
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+Glow Store © 2026
+
+<br>
+
+<strong>
+By Noor & Haneen
+</strong>
+
+<br><br>
+
+Elegance that makes you Glow ✨
+
+</footer>
+
+
+<!-- =========================================================
+     FLOATING WHATSAPP
+========================================================= -->
+
+<a
+href="https://wa.me/9640000000000"
+target="_blank"
+class="whatsapp-float"
+title="تواصل معنا عبر واتساب">
+
+☎
+
+</a>
+
+</body>
+</html>
